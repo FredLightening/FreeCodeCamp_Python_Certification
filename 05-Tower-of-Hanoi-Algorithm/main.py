@@ -26,13 +26,24 @@ def hanoi_solver(number):
     # if number
     inital=[i for i in range(1,number+1)][::-1]
     # print(inital)
-    rod_one=inital
+    rod_one=inital.copy()
     rod_two=[]
     rod_three=[]
     moves=f"{rod_one} {rod_two} {rod_three}"
     prev=None
     count=0
 
+    if number%2==0:
+        rod_two.append(rod_one[-1])
+        del(rod_one[-1])
+        moves+=f"\n{rod_one} {rod_two} {rod_three}"
+        count+=1
+
+    else:
+        rod_three.append(rod_one[-1])
+        del(rod_one[-1])
+        moves+=f"\n{rod_one} {rod_two} {rod_three}"
+        count+=1
 
         
 
