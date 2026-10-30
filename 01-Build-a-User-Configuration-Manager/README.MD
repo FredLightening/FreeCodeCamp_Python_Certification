@@ -1,11 +1,14 @@
-This is a User Configuration Manager that allows users to manage their settings such as theme, language, and notifications using python. I implemented functions to add, update,delete and view user settings.
+User Configuration Manager
 
-The scope of this project uses dictionaries and functions majorly to complete the tasks: 
+This is a Python-based User Configuration Manager that allows users to manage system settings such as themes, languages, and notifications. The project primarily utilizes Python dictionaries and functions to handle data storage and manipulation.
 
-The add function checks if the setting you want to add is already in the settings dictionary and returns a message telling you that it cannot add an already existing setting. It also returns a message of success if the setting was successfully added.
-The update function checks if the setting you want to update is in the settings dictionary and updates it if it is there and returns a message stating it cannot be done if the setting is not in the dictionary. It also returns a success message if the setting is successfully.
-The delete function checks if the setting is in the setting dictionary and deletes it if it is there but if the setting is not in the dictionary, then the setting does not delete but returns a message signifying impossibility of the task asked. It also returns a message of success to signify the deletion of the setting. 
-The view function checks if the dictionary has any settings in it and prints out the settings unto the screen and if there is not any setting in the dictionary, the function prints a message signalling an empty dictionary.
+Features
 
-Challenges faced:
-At the time I was writing this code, I did not know about how key value pairs can be used in a for loop so I had to research on for loops and how to iterate over a dictionary.
+• Add Setting: Checks if a setting already exists in the dictionary. If it does, the function returns a message stating that it cannot overwrite an existing setting. If the setting is new, it adds it and returns a success message.
+• Update Setting: Verifies whether a setting exists before modifying it. If the setting is found, it updates the value and returns a success message. If the setting does not exist, it alerts the user that the operation cannot be completed.
+• Delete Setting: Checks for the existence of a setting in the dictionary. If found, it deletes the setting and returns a success message. If the setting is missing, it returns an error message stating the task is impossible.
+• View Settings: Iterates through the dictionary to print all active settings to the screen. If the dictionary is empty, it outputs a message indicating that no settings are currently available.
+
+Challenges Faced
+
+When building this project, I initially struggled with how to access and manipulate key-value pairs inside a loop. After researching Python loops and dictionary methods, I learned how to use .items() to efficiently iterate over dictionaries.
